@@ -1,19 +1,26 @@
 $(document).ready(() => {
 	
 	$('#documentacao').on('click', () => {
+		
+		$.post('documentacao.html', data => { 
+			
+			$('#pagina').html(data)
+		
 		//$('#pagina').load('documentacao.html')
-
 		/*
 		$.get('documentacao.html', data => { 
 			$('#pagina').html(data)
 		})
 		*/
-		$.post('documentacao.html', data => { 
-			$('#pagina').html(data)
 		})
 	})
 
 	$('#suporte').on('click', () => {
+
+		$.post('suporte.html', data => { 
+			
+			$('#pagina').html(data)
+			
 		//$('#pagina').load('suporte.html')
 
 		/*
@@ -21,8 +28,6 @@ $(document).ready(() => {
 			$('#pagina').html(data)
 		})
 		*/
-		$.post('suporte.html', data => { 
-			$('#pagina').html(data)
 		})
 	})
 
@@ -43,6 +48,6 @@ $(document).ready(() => {
 			},
 		})
 
-		//método, url, dados, sucesso, erro
+		//método, url, dados, sucesso, erro.
 	})
 })
